@@ -35,13 +35,16 @@ public class ExampleMod {
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
-        MinecraftForge.EVENT_BUS.register(new ConfigurationHandler());
 
         LogHelper.info("Pre Initialization Complete!");
     }
 
     @EventHandler
     public void init(FMLInitializationEvent event) {
+
+        // Register the Items Event Handler
+        proxy.registerEventHandlers();
+
         LogHelper.info("Initialization Complete!");
     }
 
