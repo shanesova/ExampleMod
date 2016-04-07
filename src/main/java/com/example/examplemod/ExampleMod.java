@@ -5,7 +5,6 @@ import com.example.examplemod.proxy.IProxy;
 import com.example.examplemod.reference.Messages;
 import com.example.examplemod.reference.Reference;
 import com.example.examplemod.util.LogHelper;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -35,7 +34,6 @@ public class ExampleMod {
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
-
         LogHelper.info("Pre Initialization Complete!");
     }
 
